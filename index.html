@@ -9,6 +9,9 @@
 </head>
 
 <body>
+    <div class="title">
+        <h1>Filter Gallery 📷</h1>
+    </div>
     <section>
         <ul>
             <li class="list active" data-filter="All">All</li>
@@ -92,6 +95,9 @@
                     $('.item_box').not('.' + value).hide('1000');
                     $('.item_box').filter('.' + value).show('1000');
                 }
+            })
+            $('.list').click(function () {
+                $(this).addClass('active').siblings().removeClass('active');
             })
         }) 
     </script>
