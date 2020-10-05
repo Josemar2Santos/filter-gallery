@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Gallery</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    <section>
+        <ul>
+            <li class="list active" data-filter="All">All</li>
+            <li class="list" data-filter="mobile">Mobile</li>
+            <li class="list" data-filter="camera">Camera</li>
+            <li class="list" data-filter="watch">Watch</li>
+            <li class="list" data-filter="shoe">Shoe</li>
+            <li class="list" data-filter="heaphone">Headphone</li>
+        </ul>
+        <div class="product">
+            <div class="item_box mobile">
+                <img src="/imagens/mobile1.jpg" alt="">
+            </div>
+            <div class="item_box camera">
+                <img src="/imagens/camera1.jpg" alt="">
+            </div>
+            <div class="item_box watch">
+                <img src="/imagens/watch1.jpg" alt="">
+            </div>
+            <div class="item_box shoe">
+                <img src="/imagens/shoe1.jpg" alt="">
+            </div>
+            <div class="item_box heaphone">
+                <img src="/imagens/headphone1.jpg" alt="">
+            </div>
+            <div class="item_box mobile">
+                <img src="/imagens/mobile2.jpg" alt="">
+            </div>
+            <div class="item_box camera">
+                <img src="/imagens/camera2.jpg" alt="">
+            </div>
+            <div class="item_box watch">
+                <img src="/imagens/watch2.jpg" alt="">
+            </div>
+            <div class="item_box shoe">
+                <img src="/imagens/shoe2.jpg" alt="">
+            </div>
+            <div class="item_box heaphone">
+                <img src="/imagens/headphone2.jpg" alt="">
+            </div>
+            <div class="item_box mobile">
+                <img src="/imagens/mobile3.jpg" alt="">
+            </div>
+            <div class="item_box camera">
+                <img src="/imagens/camera3.jpg" alt="">
+            </div>
+            <div class="item_box watch">
+                <img src="/imagens/watch3.jpg" alt="">
+            </div>
+            <div class="item_box shoe">
+                <img src="/imagens/shoe3.jpg" alt="">
+            </div>
+            <div class="item_box heaphone">
+                <img src="/imagens/headphone3.jpg" alt="">
+            </div>
+            <div class="item_box mobile">
+                <img src="/imagens/mobile4.jpg" alt="">
+            </div>
+            <div class="item_box camera">
+                <img src="/imagens/watch4.jpg" alt="3">
+            </div>
+            <div class="item_box shoe">
+                <img src="/imagens/shoe4.jpg" alt="">
+            </div>
+            <div class="item_box heaphone">
+                <img src="/imagens/headphone4.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous">
+        </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.list').click(function () {
+                const value = $(this).attr('data-filter');
+                if (value == 'All') {
+                    $('.item_box').show('1000');
+                } else {
+                    $('.item_box').not('.' + value).hide('1000');
+                    $('.item_box').filter('.' + value).show('1000');
+                }
+            })
+        }) 
+    </script>
+</body>
+
+</html>
